@@ -4,15 +4,102 @@
     <title>Page Title</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.</p>
+    <header>
+        <div class="d-flex justify-content-between w-100 flex-column">
+            <div class="d-flex justify-content-between container">
+                <nav class="nav-header">
+                  <a class="logo nav-link" href="./home.html">Meranda</a>
+                </nav>
+                <nav class="nav-header">
+                    <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+                    <input placeholder="Search..."/>
+                    <button><i class="fas fa-search"></i></button>
+                </nav>
+            </div>
+            <div class="w-100 container">
+                <nav class="nav justify-content-start">
+                  <a class="nav-link" href="./home.html">HOME</a>
+                  <a class="nav-link" href="./categories.html">CATEGORIES</a>
+                  <a class="nav-link" href="#">POLITICS</a>
+                  <a class="nav-link" href="#">BUSINESS</a>
+                  <a class="nav-link" href="#">HEALTH</a>
+                  <a class="nav-link" href="#">DESIGN</a>
+                  <a class="nav-link" href="#">SPORT</a>
+                  <a class="nav-link" href="#">CONTACT</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="mt-5">
+      <section>
+        <div class="w-100">
+          <div class="container">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="d-flex">
+                    <img class="d-block w-50" src="./img/slide.webp" alt="First slide">
+                    <div class="ml-4">
+                      <h3>EDITOR'S PICK</h3>
+                      <h2>News Needs to Meet It Audiences Where They Are</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel sit ad reiciendis. 
+                        Enim praesentium magni delectus cum, tempore deserunt aliquid quaerat culpa nemo veritatis, 
+                        iste adipisci excepturi consectetur doloribus aliquam accusantium beatae?
+                      </p>
+                      <a href="">Dave Rogers</a> in <a href="">Food</a>
+                      <span>Jun 14 . 3 min read</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex">
+                    <img class="d-block w-50" src="./img/slide.webp" alt="First slide">
+                    <div class="ml-4">
+                      <h3>EDITOR'S PICK</h3>
+                      <h2>News Needs to Meet It Audiences Where They Are</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel sit ad reiciendis. 
+                        Enim praesentium magni delectus cum, tempore deserunt aliquid quaerat culpa nemo veritatis, 
+                        iste adipisci excepturi consectetur doloribus aliquam accusantium beatae?
+                      </p>
+                      <a href="">Dave Rogers</a> in <a href="">Food</a>
+                      <span>Jun 14 . 3 min read</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev ml-3" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="slider-arrow" aria-hidden="true"><i class="fas fa-arrow-left"></i></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next mr-3" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="slider-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </section>
+    </div>
+    
+    <footer>
+
+    </footer>
 
     <script src="./script.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
