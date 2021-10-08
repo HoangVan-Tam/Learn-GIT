@@ -1,109 +1,518 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Page Title</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-
-    <header>
-        <div class="d-flex justify-content-between w-100 flex-column">
-            <div class="d-flex justify-content-between container">
-                <nav class="nav-header">
-                  <a class="logo nav-link" href="./home.html">Meranda</a>
-                </nav>
-                <nav class="nav-header">
-                    <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
-                    <input placeholder="Search..."/>
-                    <button><i class="fas fa-search"></i></button>
-                </nav>
+    <head>
+        <title>Page Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="./homestyle.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    </head>
+    <body>
+        <div class="header-top">
+            <div class="container">
+                <div>
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-6 d-flex">
+                            <a href="index.html" class="site-logo">Meranda</a>
+                        </div>
+                        <div class="col-12 col-lg-6 ml-auto d-flex">
+                            <div class="ml-md-auto top-social d-none d-lg-inline-block">
+                                <a href="#" class="d-inline-block p-3"><span class="fa fa-facebook"></span></a>
+                                <a href="#" class="d-inline-block p-3"><span class="fa fa-twitter"></span></a>
+                                <a href="#" class="d-inline-block p-3"><span class="fa fa-instagram"></span></a>
+                            </div>
+                            <form action="#" class="search-form d-inline-block">
+                                <div class="d-flex">
+                                    <input type="email" class="form-control" placeholder="Search...">
+                                    <button type="submit" class="btn btn-secondary"><span class="fa fa-search"></span></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-6 d-block d-lg-none text-right">
+                        </div>
+                        </div>
+                </div>
             </div>
-            <div class="w-100 container">
-                <nav class="nav justify-content-start">
-                  <a class="nav-link" href="./home.html">HOME</a>
-                  <a class="nav-link" href="./categories.html">CATEGORIES</a>
-                  <a class="nav-link" href="#">POLITICS</a>
-                  <a class="nav-link" href="#">BUSINESS</a>
-                  <a class="nav-link" href="#">HEALTH</a>
-                  <a class="nav-link" href="#">DESIGN</a>
-                  <a class="nav-link" href="#">SPORT</a>
-                  <a class="nav-link" href="#">CONTACT</a>
-                </nav>
+            <div id="sticky-wrapper" class="sticky-wrapper" style="height: 54px;">
+                <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner" style="width: 1349px;">
+                <div class="container">
+                    <div class="d-flex align-items-center">
+                        <div class="mr-auto">
+                            <nav class="site-navigation position-relative text-right" role="navigation">
+                                <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
+                                    <li class="active">
+                                        <a href="home.html" class="nav-link text-left">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="categories.html" class="nav-link text-left">Categories</a>
+                                    </li>
+                                    <li>
+                                        <a href="categories.html" class="nav-link text-left">Politics</a>
+                                    </li>
+                                    <li>
+                                        <a href="categories.html" class="nav-link text-left">Business</a>
+                                    </li>
+                                    <li>
+                                        <a href="categories.html" class="nav-link text-left">Health</a>
+                                    </li>
+                                    <li>
+                                        <a href="categories.html" class="nav-link text-left">Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="categories.html" class="nav-link text-left">Sport</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html" class="nav-link text-left">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
-    </header>
-    <div class="mt-5">
-      <section>
-        <div class="w-100">
-          <div class="container">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="d-flex">
-                    <img class="d-block w-50" src="./img/slide.webp" alt="First slide">
-                    <div class="ml-4">
-                      <h3>EDITOR'S PICK</h3>
-                      <h2>News Needs to Meet It Audiences Where They Are</h2>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel sit ad reiciendis. 
-                        Enim praesentium magni delectus cum, tempore deserunt aliquid quaerat culpa nemo veritatis, 
-                        iste adipisci excepturi consectetur doloribus aliquam accusantium beatae?
-                      </p>
-                      <a href="">Dave Rogers</a> in <a href="">Food</a>
-                      <span>Jun 14 . 3 min read</span>
+        <div class="site-section py-0">
+            <div class="owl-carousel hero-slide owl-style owl-loaded owl-drag carousel-fade">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage" style="transform: translate3d(-2698px, 0px, 0px); transition: all 1s ease 0s; width: 8094px;">
+                        <div class="owl-item cloned" style="width: 1349px;">
+                            <div class="site-section">
+                                <div class="container">
+                                    <div class="half-post-entry d-block d-lg-flex bg-light">
+                                        <div class="img-bg" style="background-image:url('./Image/image_template.PNG')"></div>
+                                        <div class="contents">
+                                            <span class="caption">Editor's Pick</span>
+                                            <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                            <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel sit ad reiciendis. Enim praesentium magni delectus cum, tempore deserunt aliquid quaerat culpa nemo veritatis, iste adipisci excepturi consectetur doloribus aliquam accusantium beatae?</p>
+                                            <div class="post-meta">
+                                                <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">Food</a></span>
+                                                <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: 1349px;">
+                            <div class="site-section">
+                                <div class="container">
+                                    <div class="half-post-entry d-block d-lg-flex bg-light">
+                                        <div class="img-bg" style="background-image:url('./Image/image_template.PNG')"></div>
+                                        <div class="contents">
+                                            <span class="caption">Editor's Pick</span>
+                                            <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                            <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel sit ad reiciendis. Enim praesentium magni delectus cum, tempore deserunt aliquid quaerat culpa nemo veritatis, iste adipisci excepturi consectetur doloribus aliquam accusantium beatae?</p>
+                                            <div class="post-meta">
+                                                <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">Food</a></span>
+                                                <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="width: 1349px;">
+                            <div class="site-section">
+                                <div class="container">
+                                    <div class="half-post-entry d-block d-lg-flex bg-light">
+                                        <div class="img-bg" style="background-image:url('./Image/image_template.PNG')"></div>
+                                        <div class="contents">
+                                            <span class="caption">Editor's Pick</span>
+                                            <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                            <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel sit ad reiciendis. Enim praesentium magni delectus cum, tempore deserunt aliquid quaerat culpa nemo veritatis, iste adipisci excepturi consectetur doloribus aliquam accusantium beatae?</p>
+                                            <div class="post-meta">
+                                                <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">Food</a></span>
+                                                <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 1349px;">
+                            <div class="site-section">
+                                <div class="container">
+                                    <div class="half-post-entry d-block d-lg-flex bg-light">
+                                        <div class="img-bg" style="background-image:url('./Image/image_template.PNG')"></div>
+                                        <div class="contents">
+                                            <span class="caption">Editor's Pick</span>
+                                            <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                            <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel sit ad reiciendis. Enim praesentium magni delectus cum, tempore deserunt aliquid quaerat culpa nemo veritatis, iste adipisci excepturi consectetur doloribus aliquam accusantium beatae?</p>
+                                            <div class="post-meta">
+                                                <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">Food</a></span>
+                                                <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <div class="carousel-item">
-                  <div class="d-flex">
-                    <img class="d-block w-50" src="./img/slide.webp" alt="First slide">
-                    <div class="ml-4">
-                      <h3>EDITOR'S PICK</h3>
-                      <h2>News Needs to Meet It Audiences Where They Are</h2>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel sit ad reiciendis. 
-                        Enim praesentium magni delectus cum, tempore deserunt aliquid quaerat culpa nemo veritatis, 
-                        iste adipisci excepturi consectetur doloribus aliquam accusantium beatae?
-                      </p>
-                      <a href="">Dave Rogers</a> in <a href="">Food</a>
-                      <span>Jun 14 . 3 min read</span>
+                <div class="owl-nav">
+                    <div class="owl-prev">
+                        <span class="fa fa-angle-left"></span>
                     </div>
-                  </div>
+                    <div class="owl-next">
+                        <span class="fa fa-angle-right"></span>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <a class="carousel-control-prev ml-3" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="slider-arrow" aria-hidden="true"><i class="fas fa-arrow-left"></i></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next mr-3" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="slider-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
-      </section>
-    </div>
-    
-    <footer>
+        <div class="site-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="section-title">
+                                    <h2>Editor's Pick</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="post-entry-1">
+                                    <a href="post-single.html"><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script data-pagespeed-no-defer="">//<![CDATA[
+                                            (function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}
+                                            var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;
+                                            function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}
+                                            function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),
+                                            b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});
+                                            function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=
+                                            new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}
+                                            function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});
+                                            u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();
+                    
+                                            pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','https://preview.colorlib.com/theme/meranda/index.html','-ilGEe-FWC',true,false,'vhKRUJB50Wg');
+                                        </script><img src="./Image/picture1.PNG" alt="Image" class="img-fluid" data-pagespeed-url-hash="3707316780" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                                    </a>
+                                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                                    <div class="post-meta">
+                                        <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                        <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="post-entry-2 d-flex bg-light">
+                                    <div class="thumbnail" style="background-image:url('./Image/picture2.PNG')">
+                                    </div>
+                                    <div class="contents">
+                                        <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                        <div class="post-meta">
+                                            <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                            <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-entry-2 d-flex">
+                                    <div class="thumbnail" style="background-image:url('./Image/picture3.PNG')">
+                                    </div>
+                                    <div class="contents">
+                                        <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                        <div class="post-meta">
+                                            <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                            <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-entry-2 d-flex">
+                                    <div class="thumbnail" style="background-image:url('./Image/image_template.PNG')">
+                                    </div>
+                                    <div class="contents">
+                                        <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                        <div class="post-meta">
+                                            <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                            <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="section-title">
+                            <h2>Trending</h2>
+                        </div>
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">01</div>
+                            <div class="trend-contents">
+                                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                    <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">02</div>
+                            <div class="trend-contents">
+                                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                    <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">03</div>
+                            <div class="trend-contents">
+                                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                    <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="trend-entry d-flex">
+                            <div class="number align-self-start">04</div>
+                            <div class="trend-contents">
+                                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                    <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            <a href="#" class="more">See All Trends  <span class="fa fa-angle-right"></span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-0">
+            <div class="container">
+                <div class="half-post-entry d-block d-lg-flex bg-light">
+                    <div class="img-bg" style="background-image:url('./Image/image_template.PNG')"></div>
+                    <div class="contents">
+                        <span class="caption">Editor's Pick</span>
+                        <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel sit ad reiciendis. Enim praesentium magni delectus cum, tempore deserunt aliquid quaerat culpa nemo veritatis, iste adipisci excepturi consectetur doloribus aliquam accusantium beatae?</p>
+                        <div class="post-meta">
+                            <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">Food</a></span>
+                            <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="section-title">
+                            <h2>Politics</h2>
+                        </div>
+                        <div class="post-entry-2 d-flex">
+                            <div class="thumbnail" style="background-image:url('./Image/picture4.PNG')"></div>
+                            <div class="contents">
+                                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                                <div class="post-meta">
+                                    <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                    <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-entry-2 d-flex">
+                            <div class="thumbnail" style="background-image:url('./Image/picture3.PNG')"></div>
+                            <div class="contents">
+                                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                                <div class="post-meta">
+                                    <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                    <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-entry-2 d-flex">
+                            <div class="thumbnail" style="background-image:url('./Image/image_template.PNG')"></div>
+                            <div class="contents">
+                                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                                <div class="post-meta">
+                                    <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                    <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="section-title">
+                            <h2>Business</h2>
+                        </div>
+                        <div class="post-entry-2 d-flex">
+                            <div class="thumbnail" style="background-image:url('./Image/picture4.PNG')"></div>
+                            <div class="contents">
+                                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                                <div class="post-meta">
+                                    <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                    <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-entry-2 d-flex">
+                            <div class="thumbnail" style="background-image:url('./Image/picture3.PNG')"></div>
+                            <div class="contents">
+                                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                                <div class="post-meta">
+                                    <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                    <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-entry-2 d-flex">
+                            <div class="thumbnail" style="background-image:url('./Image/image_template.PNG')"></div>
+                            <div class="contents">
+                                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                                <div class="post-meta">
+                                    <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                    <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="section-title">
+                            <h2>Recent News</h2>
+                        </div>
+                        <div class="post-entry-2 d-flex">
+                            <div class="thumbnail order-md-2" style="background-image:url('./Image/picture5.PNG')"></div>
+                            <div class="contents order-md-1 pl-0">
+                                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                                <div class="post-meta">
+                                    <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                    <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-entry-2 d-flex">
+                            <div class="thumbnail order-md-2" style="background-image:url('./Image/image_template.PNG')"></div>
+                            <div class="contents order-md-1 pl-0">
+                                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                                <div class="post-meta">
+                                    <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                    <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-entry-2 d-flex">
+                            <div class="thumbnail order-md-2" style="background-image:url('./Image/image_template.PNG')"></div>
+                            <div class="contents order-md-1 pl-0">
+                                <span class="caption mb-4 d-block">Editor's Pick</span>
+                                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                                <div class="post-meta">
+                                    <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                    <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="section-title">
+                            <h2>Popular Posts</h2>
+                        </div>
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">01</div>
+                            <div class="trend-contents">
+                                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                    <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">02</div>
+                            <div class="trend-contents">
+                                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                    <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">03</div>
+                            <div class="trend-contents">
+                                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                    <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trend-entry d-flex pl-0">
+                            <div class="number align-self-start">04</div>
+                            <div class="trend-contents">
+                                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                                    <span class="date-read">Jun 14 <span class="mx-1">•</span> 3 min read <span class="fas fa-star"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            <a href="#" class="more">See All Popular <span class="fa fa-angle-right"></span></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <ul class="custom-pagination list-unstyled">
+                            <li><a href="#">1</a></li>
+                            <li class="active">2</li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-section subscribe bg-light">
+            <div class="container">
+                <form action="#" class="row align-items-center">
+                    <div class="col-md-5 mr-auto">
+                        <h2>Newsletter Subcribe</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aspernatur ut at quae omnis pariatur obcaecati possimus nisi ea iste!</p>
+                    </div>
+                    <div class="col-md-6 ml-auto">
+                        <div class="d-flex">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <button type="submit" class="btn btn-secondary"><span class="fas fa-paper-plane"></span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
 
-    </footer>
-
-    <script src="./script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.3/umd/popper.min.js" integrity="sha512-53CQcu9ciJDlqhK7UD8dZZ+TF2PFGZrOngEYM/8qucuQba+a+BXOIRsp9PoMNJI3ZeLMVNIxIfZLbG/CdHI5PA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./homepageslide.js"></script>
+    </body>
 </html>
